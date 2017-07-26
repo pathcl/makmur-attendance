@@ -1,0 +1,196 @@
+.checkbox{
+	width: 30px;
+}
+
+.checkbox input{
+	height: 15px;
+	width: 15px;
+}
+
+table.fixed{
+	table-layout: fixed;
+}
+
+th.buttons{
+	padding: 0;
+}
+
+th.buttons button{
+	background: #5cb85c;
+	color: #fff;
+	border-radius: 4px;
+	margin: 5px;
+	cursor: pointer;
+	width: 200px;
+}
+
+.hidden{
+	display: none;
+}
+
+.time{
+	white-space: nowrap;
+}
+
+.time input{
+	width: 80px;
+}
+
+.green{
+	color: #8bc34a;
+	font-weight: bold;
+}
+
+.time button{
+	color: #222;
+	background: #ddd;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+    margin: 0;
+    vertical-align: bottom;
+}
+
+#picker{
+	position: absolute;
+	color: #fff;
+	background: #222;
+	border: 1px solid #000;
+	width: 110px;
+	min-height: 30px;
+	box-sizing: border-box;
+	transform-origin: 0 0;
+	transform: scale(1, 0);
+}
+
+#picker.show{
+	display: block;
+	-webkit-transform-origin: 0 0;
+	-moz-transform-origin: 0 0;
+	transform: scale(1, 1);
+	transition: transform ease .2s;
+}
+
+#picker ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+#picker li{
+	line-height: 28px;
+	text-align: center;
+	cursor: default;
+}
+
+#picker li:hover{
+	background: #03a9f4;
+}
+
+.filter{
+	margin-bottom: 20px;
+}
+
+.filter [type=checkbox]{
+	display: none;
+}
+
+.filter label[for]{
+	float: right;
+	width: auto;
+	color: #fff;
+	border: 2px solid transparent;
+	padding: 10px;
+}
+
+.filter [type=text]{
+	padding: 10px;
+	text-align: left;
+	height: auto;
+	font-size: 12px;
+	width: 400px;
+}
+
+.filter [type=checkbox] +label[for]{
+	background: #ddd;
+	border-color: #ddd;
+}
+
+.filter [type=checkbox]:checked +label[for]{
+	background: #4caf50;
+	border-color: #4caf50;
+}
+
+.btn-save{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	background: transparent;
+	opacity: .6;
+	padding: 30px;
+	transition: ease .4s;
+}
+
+.btn-save:hover{
+	opacity: 1;
+}
+
+.btn-save button{
+	background: #4caf50;
+	margin: 0;
+	width: 80px;
+	cursor: pointer;
+}
+
+.fixed-header{
+	opacity: 1;
+	position: fixed;
+	top: 50px;
+	left: 10px;
+	width: calc(100vw - 37px);
+}
+
+.btns button{
+	width: 30px;
+	background: #ddd;
+	color: #222;
+}
+
+.loading{
+	width: 100%;
+	padding: 10px 0;
+}
+
+.downloading{
+	width: 75%;
+	padding: 2px 0;
+	display: inline-block;
+}
+
+.loading, .downloading{
+	text-align: center;
+	color: #fff;
+	background: repeating-linear-gradient(
+      45deg,
+      #3b7dc9,
+      #3b7dc9 10px,
+      #1565c0 10px,
+      #1565c0 20px
+    );
+	background-size: 28px 38px;
+	
+	animation: progbar .2s linear infinite;
+}
+
+@keyframes progbar{
+	0%{
+		background-position: 0 0;
+	}
+	50%{
+		background-position: 14px 0;
+	}
+	100%{
+		background-position: 28px 0;
+	}
+}
